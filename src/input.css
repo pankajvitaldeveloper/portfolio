@@ -1,0 +1,239 @@
+@import "tailwindcss";
+html {
+  scroll-padding-top: 80px;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+#main {
+  margin-top: 8rem;
+}
+
+/* profile css code */
+.profile-container {
+    position: relative;
+  }
+
+  .profile-container::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #6366f1, #a855f7, #4f39f6, #6366f1);
+    animation: rotate 2s linear infinite;
+    background-size: 200% 200%;
+  }
+
+  .profile-container::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: black;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .profile-image {
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    width: 112px;
+    height: 112px;
+    /* object-fit: cover; */
+    transition: transform 0.3s ease;
+  }
+
+  .profile-container:hover .profile-image {
+    transform: scale(1.1);
+  }
+
+  @keyframes rotate {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 200% 0%;
+    }
+  }
+
+  /* dark/light mode code  */
+  .sun {
+    background-color: #4f39f6;
+    padding: 0.2rem 0.4rem;
+    color: #fff;
+  }
+  .moon {
+    background-color: #ffffff;
+    padding: 0.2rem 0.4rem;
+    color: #615fff;
+  }
+
+  /* animation below code */
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+}
+.delay-200 {
+    animation-delay: 200ms;
+}
+.delay-400 {
+    animation-delay: 400ms;
+}
+.delay-600 {
+    animation-delay: 600ms;
+}
+
+/* skills bar animation width code */
+@keyframes skillBarFill {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: var(--skill-percent);
+  }
+}
+
+.skill-bar .progress-bar {
+  width: var(--skill-percent);
+  animation: skillBarFill 1.5s ease-out forwards;
+}
+
+/* certificate code */
+.certification-card {
+  transition: all 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.certification-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.1), 0 10px 10px -5px rgba(79, 70, 229, 0.04);
+}
+
+.certification-card .icon-container {
+  transition: transform 0.3s ease-in-out;
+}
+
+.certification-card:hover .icon-container {
+  transform: rotateY(360deg);
+}
+
+.certification-card .view-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-card .view-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease-in-out;
+}
+
+.certification-card:hover .view-btn::before {
+  left: 100%;
+}
+
+.certificate-modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.certificate-modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: transparent;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  max-width: 70%;
+  max-height: 80%;
+  max-width: auto;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.certificate-image {
+  width: 65%;
+  height: 100%
+}
+
+
+
+/* project code */
+.card-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover .hover-content {
+  position: absolute;
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.9); /* semi-transparent overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-hover:hover .hover-content {
+  opacity: 1;
+}

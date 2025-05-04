@@ -1,0 +1,27 @@
+
+/* note in my project of protfolio most of the time i use tailwind css so i dont have to write css for every element */
+@media screen and (max-width: 768px)  {
+    .certificate-image {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 576px)  {
+    .certificate-image {
+        width: 100%;
+    }
+    .modal-content {
+        padding: 0;
+        max-width: 90%;
+    }
+    .modal-close {
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 400px)  {
+    .hm-about h1 {
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- Below link of font awesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- below code of tailwind css -->
+    <link href="./output.css" rel="stylesheet" />
+
+    
+    <!-- below code of resize css mean media query use only for responsive website -->
+    <!-- <link rel="stylesheet" href="resize.css"> -->
+    
+  </head>
+  <body class="dark:bg-gray-900 transition-colors duration-300">
+
+    <!-- Header Section Code of below-->
+     <!-- For menu i used peer and peer-checked:translate-x-0 md:block hidden -->
+    <header class="bg-indigo-500 shadow-lg w-full top-0" id="header">
+      <div
+        class="max-w-screen-xl mx-auto p-4 flex justify-between items-center"
+      >
+        <img src="./img/logo.png" alt="Logo" class="h-12 w-auto" />
+
+        <!-- Mobile Menu Checkbox (hidden) -->
+        <input type="checkbox" id="nav-toggle" class="hidden peer" />
+        
+        <!-- Mobile Menu Toggle Button -->
+        <label for="nav-toggle" class="md:hidden cursor-pointer bg-grey-900 text-white">
+          <i class="fas fa-bars text-2xl text-white-700 hover:text-white-900"></i>
+        </label>
+
+        <!-- Navigation Menu below code for both mobile and desktop -->
+        <nav class="fixed md:relative top-0 right-0 h-full w-64 md:w-auto 
+        bg-gray-900 md:bg-transparent transform translate-x-full md:translate-x-0 
+                transition-transform duration-300 ease-in-out
+                peer-checked:translate-x-0 md:block
+                z-50">
+          <label for="nav-toggle" class="absolute top-4 right-4 text-gray-400 hover:text-white md:hidden">
+            <i class="fas fa-times text-2xl"></i>
+          </label>
+          
+          <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-6 md:p-0 mt-12 md:mt-0">
+            <li>
+              <a href="#" class="text-gray-300 md:text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors block">Home</a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#certifications"
+                class="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >Certifications</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >Contact</a
+              >
+            </li>
+            <div class="flex ">
+              <div class="sun"><i class="fas fa-sun hidden"></i></div>
+              <div class="moon">
+                <i class="fas fa-moon hidden dark:block"></i>
+              </div>
+            </div>
+            
+          </ul>
+        </nav>
+
+        
+
+       
+      </div>
+    </header>
+    <!-- End of Header Section Code of below-->
+
+    <main class="container mx-auto p-4 mt-3" id="main">
+      <div class="grid text-center gap--4">
+        <!-- profile image code below  -->
+
+        <div class="hm-profile mx-auto group animate-fadeInUp">
+          <div class="profile-container">
+            <img
+              src="./img/profile.jpg"
+              alt="Profile Picture"
+              class="profile-image"
+            />
+          </div>
+        </div>
+
+        <!-- hm about code below -->
+        <div
+         
+          class="hm-about mt-10 px-6 py-8 max-w-4xl mx-auto bg-indigo-500 rounded-2xl shadow-md animate-fadeInUp delay-200"
+        >
+          <span class="text-white font-medium">Hi, I'm</span>
+          <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            Pankaj Kumar Mahto
+          </h1>
+
+          <p class="text-white">
+            I am a <strong>full-stack web</strong> developer.
+          </p>
+        </div>
+
+        <!-- my social link code below -->
+        <div class="mysocial mt-5 animate-fadeInUp delay-400">
+          <div
+            class="social-link-top flex justify-center items-center gap-6 mt-4 text-gray-700 dark:text-gray-300 text-xl"
+          >
+            <a
+              href="#"
+              target="_blank"
+              aria-label="Facebook"
+              class="bg-gray-800 hover:bg-blue-600 w-10 h-10 flex items-center justify-center rounded-full transform hover:scale-110 transition-all duration-300 hover:text-white"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              aria-label="Instagram"
+              class="bg-gray-800 hover:bg-pink-600 w-10 h-10 flex items-center justify-center rounded-full transform hover:scale-110 transition-all duration-300 hover:text-white"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="bg-gray-800 hover:bg-blue-500 w-10 h-10 flex items-center justify-center rounded-full transform hover:scale-110 transition-all duration-300 hover:text-white"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="#"
+              target="_blank"
+              aria-label="WhatsApp"
+              class="bg-gray-800 hover:bg-green-500 w-10 h-10 flex items-center justify-center rounded-full transform hover:scale-110 transition-all duration-300 hover:text-white"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+           
+          
+          </div>
+        </div>
+        <!-- end of my social link code below -->
+
+        <!-- Resume button code below -->
+        <div class="resume-btn mx-auto mt-5 animate-fadeInUp delay-600">
+          <button
+            class="relative flex items-center px-6 py-2 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group"
+          >
+            <span
+              class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4"
+            >
+              <span
+                class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+              ></span>
+            </span>
+            <span
+              class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4"
+            >
+              <span
+                class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+              ></span>
+            </span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"
+            ></span>
+            <span
+              class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white"
+              ><i class="fas fa-download"></i> Resume</span
+            >
+          </button>
+        </div>
+        <!-- end of Resume button code below -->
+      </div>
+    </main>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-12 bg-white dark:bg-gray-900">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <!-- Image Column (4 of 12) -->
+          <div class="md:col-span-3">
+            <img
+              src="./img/about.jpg"
+              alt="About Me"
+              class="rounded-lg shadow-md w-full h-auto"
+            />
+          </div>
+
+          <!-- Text Column (8 of 12) -->
+          <div class="md:col-span-9" >
+            <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+              About Me
+            </h2>
+            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+              I'm a passionate and detail-oriented
+              <span class="font-semibold">MERN Stack Developer</span> with a
+              strong foundation in React, Node.js, Express, and MongoDB. I
+              specialize in building full-stack web applications with clean,
+              responsive designs and optimized backend performance.
+            </p>
+
+            <p
+              class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mt-4"
+            >
+              With hands-on experience in both front-end and back-end
+              development, I strive to deliver scalable and user-friendly
+              digital solutions. Whether it's dynamic user interfaces, secure
+              APIs, or efficient database management, I love bringing ideas to
+              life through code.
+            </p>
+            <div class="button-r mt-5">
+              <button
+                class="relative flex items-center px-6 py-2 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group"
+              >
+                <span
+                  class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4"
+                >
+                  <span
+                    class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+                  ></span>
+                </span>
+                <span
+                  class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4"
+                >
+                  <span
+                    class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+                  ></span>
+                </span>
+                <span
+                  class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"
+                ></span>
+                <span
+                  class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white"
+                  >Read More</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of About Me Section  -->
+
+    <!-- Skills Section Code Below --> 
+    <section id="skills" class="my-skill py-12 bg-gray-900">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center text-white">
+          My <span class="text-indigo-400">Skills</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Frontend Skills - 6 items -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-4 text-indigo-400">
+              Frontend Development
+            </h3>
+            <div class="grid grid-cols-1 gap-4">
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >HTML5</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">95%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 95%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >CSS3</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 90%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >JavaScript</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >React.js</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 80%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >Redux</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 75%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >Tailwind CSS</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 85%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Skills - 6 items -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-4 text-indigo-400">
+              Backend Development
+            </h3>
+            <div class="grid grid-cols-1 gap-4">
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >Node.js</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 80%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >Express.js</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 75%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >MongoDB</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">70%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 70%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >REST APIs</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400">SQL</span>
+                  <span class="text-sm font-medium text-indigo-400">75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 75%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >API Design</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Programming Tools - Full Width -->
+          <div
+            class="col-span-1 md:col-span-2 bg-gray-800 p-6 rounded-xl shadow-lg"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-indigo-400">
+              Programming & Tools
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400">Git</span>
+                  <span class="text-sm font-medium text-indigo-400">85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >GitHub</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">80%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 80%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >VS Code</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 90%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="flex justify-between mb-1">
+                  <span class="text-base font-medium text-indigo-400"
+                    >Postman</span
+                  >
+                  <span class="text-sm font-medium text-indigo-400">75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div
+                    class="bg-indigo-400 h-2 rounded-full progress-bar"
+                    style="--skill-percent: 75%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills with Circular Progress -->
+          <div class="col-span-1 md:col-span-2 flex justify-center gap-8 mt-4">
+            <div class="relative w-32 h-32">
+              <svg class="w-full h-full" viewBox="0 0 36 36">
+                <path
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#374151"
+                  stroke-width="3"
+                />
+                <path
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#818cf8"
+                  stroke-width="3"
+                  stroke-dasharray="80, 100"
+                />
+              </svg>
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+              >
+                <span class="text-2xl font-bold text-indigo-400">80%</span>
+                <span class="block text-sm text-white">Team Work</span>
+              </div>
+            </div>
+
+            <div class="relative w-32 h-32">
+              <svg class="w-full h-full" viewBox="0 0 36 36">
+                <path
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#374151"
+                  stroke-width="3"
+                />
+                <path
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#818cf8"
+                  stroke-width="3"
+                  stroke-dasharray="91, 100"
+                />
+              </svg>
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+              >
+                <span class="text-2xl font-bold text-indigo-400">91%</span>
+                <span class="block text-sm text-white">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Skills Section -->
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-12 bg-white dark:bg-gray-900">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+          My <span class="text-indigo-400">Certifications</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- MERN Stack Certificate -->
+          <div class="certification-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+              <div class="icon-container text-indigo-400 text-4xl mb-4 flex items-center justify-center">
+                <i class="fas fa-award"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-white text-center">Full Stack Web Development</h3>
+              <p class="text-gray-300 mb-4 text-center">
+                Complete MERN Stack Development certification from Udemy.
+              </p>
+              <div class="flex items-center justify-between text-gray-400 mb-4">
+                <span><i class="fas fa-calendar-alt mr-2"></i>Jan 2025</span>
+                <span><i class="fas fa-star mr-2"></i>Grade: A+</span>
+              </div>
+              <a href="#cert1" class="view-btn block w-full bg-indigo-500 text-white text-center px-6 py-2 rounded-md hover:bg-indigo-600 transition-colors duration-300">
+                <i class="fas fa-eye mr-2"></i>View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate Modal 1 -->
+          <div id="cert1" class="certificate-modal">
+            <div class="modal-content">
+              <a href="#" class="modal-close">&times;</a>
+              <img
+                src="./img/certificate.jpg"
+                alt="MERN Stack Certificate"
+                class="certificate-image"
+              />
+            </div>
+          </div>
+
+          <!-- React Certificate -->
+          <div class="certification-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+              <div class="icon-container text-indigo-400 text-4xl mb-4 flex items-center justify-center">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-white text-center">React Development</h3>
+              <p class="text-gray-300 mb-4 text-center">
+                Advanced React.js development certification from freeCodeCamp.
+              </p>
+              <div class="flex items-center justify-between text-gray-400 mb-4">
+                <span><i class="fas fa-calendar-alt mr-2"></i>Mar 2025</span>
+                <span><i class="fas fa-star mr-2"></i>Grade: A</span>
+              </div>
+              <a href="#cert2" class="view-btn block w-full bg-indigo-500 text-white text-center px-6 py-2 rounded-md hover:bg-indigo-600 transition-colors duration-300">
+                <i class="fas fa-eye mr-2"></i>View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate Modal 2 -->
+          <div id="cert2" class="certificate-modal">
+            <div class="modal-content">
+              <a href="#" class="modal-close">&times;</a>
+              <img
+                src="./img/certificate.jpg"
+                alt="React Certificate"
+                class="certificate-image"
+              />
+            </div>
+          </div>
+
+          <!-- Backend Certificate -->
+          <div class="certification-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+              <div class="icon-container text-indigo-400 text-4xl mb-4 flex items-center justify-center">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-white text-center">Backend Development</h3>
+              <p class="text-gray-300 mb-4 text-center">
+                Node.js and Express.js certification from Coursera.
+              </p>
+              <div class="flex items-center justify-between text-gray-400 mb-4">
+                <span><i class="fas fa-calendar-alt mr-2"></i>Apr 2025</span>
+                <span><i class="fas fa-star mr-2"></i>Grade: A+</span>
+              </div>
+              <a href="#cert3" class="view-btn block w-full bg-indigo-500 text-white text-center px-6 py-2 rounded-md hover:bg-indigo-600 transition-colors duration-300">
+                <i class="fas fa-eye mr-2"></i>View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Certifications -->
+
+    <!-- Projects Section Code below -->
+    <section id="projects" class="py-12">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">
+          My <span class="text-indigo-400">Projects</span>
+        </h2>
+  
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  
+          <!-- Project Card Example -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 card-hover">
+            <img
+              src="./img/project1.jpeg"
+              alt="Project 1"
+              class="w-full h-auto sm:h-auto md:h-48 md:object-cover"
+            />
+            <div class="hover-content">
+              <h3 class="text-xl font-bold text-indigo-400 mb-2">Responsive Web UI</h3>
+              <p class="text-sm text-white">Tailwind CSS + React landing page</p>
+            </div>
+          </div>
+  
+          <!-- Duplicate for other projects -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 card-hover">
+            <img
+              src="./img/project2.jpeg"
+              alt="Project 2"
+              class="w-full h-auto sm:h-auto md:h-48 md:object-cover"
+            />
+            <div class="hover-content">
+              <h3 class="text-xl font-bold text-indigo-400 mb-2">React Dashboard</h3>
+              <p class="text-sm text-white">Admin dashboard with charts & filters</p>
+            </div>
+          </div>
+  
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 card-hover">
+            <img
+              src="./img/project3.jpg"
+              alt="Project 3"
+              class="w-full h-auto sm:h-auto md:h-48 md:object-cover"
+            />
+            <div class="hover-content">
+              <h3 class="text-xl font-bold text-indigo-400 mb-2">JS Utilities</h3>
+              <p class="text-sm text-white">Reusable JS utility functions</p>
+            </div>
+          </div>
+  
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 card-hover">
+            <img
+              src="./img/project4.jpeg"
+              alt="Project 4"
+              class="w-full h-auto sm:h-auto md:h-48 md:object-cover"
+            />
+            <div class="hover-content">
+              <h3 class="text-xl font-bold text-indigo-400 mb-2">Node.js API</h3>
+              <p class="text-sm text-white">RESTful API with Express & MongoDB</p>
+            </div>
+          </div>
+  
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 card-hover">
+            <img
+              src="./img/project5.jpeg"
+              alt="Project 5"
+              class="w-full h-auto sm:h-auto md:h-48 md:object-cover"
+            />
+            <div class="hover-content">
+              <h3 class="text-xl font-bold text-indigo-400 mb-2">Data Dashboard</h3>
+              <p class="text-sm text-white">MongoDB + React data viz</p>
+            </div>
+          </div>
+  
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 card-hover">
+            <img
+              src="./img/project6.jpg"
+              alt="Project 6"
+              class="w-full h-auto sm:h-auto md:h-48 md:object-cover"
+            />
+            <div class="hover-content">
+              <h3 class="text-xl font-bold text-indigo-400 mb-2">Portfolio Website</h3>
+              <p class="text-sm text-white">Built with Tailwind & JavaScript</p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Projects Section -->
+
+    <!-- Contact Section Code below -->
+    <section id="contact" class="py-12 bg-gray-100 dark:bg-gray-900">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white"
+        >
+          Get in <span class="text-indigo-400">Touch</span>
+        </h2>
+
+        <div class="max-w-xl mx-auto">
+          <form action="#" method="POST">
+            <div class="mb-4">
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-800 dark:text-white dark:border-gray-700"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-800 dark:text-white dark:border-gray-700"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-800 dark:text-white dark:border-gray-700"
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-indigo-500 text-white px-6 py-2 rounded-md hover:bg-indigo-600 transition-colors duration-300"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End of Contact Section -->
+
+    <!-- Footer Section Code below -->
+    <footer class="bg-gray-800 text-white py-4 text-center">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row justify-between items-center">
+
+        <p class="text-sm">
+          &copy; 2023 Pankaj Kumar Mahto. All rights reserved.
+        </p>
+        <div class="socail-ft pb-2 sm:pb-4 md:pb-0">
+          <div class="contact-info flex justify-center gap-x-1.5">
+            <!-- WhatsApp -->
+            <a
+              href="#9315370159"
+              target="_blank"
+              class="contact-item flex flex-col items-center"
+            >
+              <div
+                class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-green-600 transition-colors"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a
+              href="tel:+9315370159"
+              class="contact-item flex flex-col items-center"
+            >
+              <div
+                class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-blue-600 transition-colors"
+              >
+                <i class="fas fa-phone"></i>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a
+              href="mailto:pankajkumardeveloper0@gmail.com"
+              class="contact-item flex flex-col items-center"
+            >
+              <div
+                class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white text-xl hover:bg-red-600 transition-colors"
+              >
+                <i class="fas fa-envelope"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer Section -->
+  </body>
+</html>
